@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0CA12117916E4500E4F721 /* FirstTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0CA12017916E4500E4F721 /* FirstTableCell.xib */; };
+		DF0CA12417918A3F00E4F721 /* FirstTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0CA12317918A3E00E4F721 /* FirstTableCell.m */; };
 		DF6B41A8178DC6DA00181DEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6B41A7178DC6DA00181DEA /* UIKit.framework */; };
 		DF6B41AA178DC6DA00181DEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6B41A9178DC6DA00181DEA /* Foundation.framework */; };
 		DF6B41AC178DC6DA00181DEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6B41AB178DC6DA00181DEA /* CoreGraphics.framework */; };
@@ -37,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF0CA12017916E4500E4F721 /* FirstTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTableCell.xib; sourceTree = "<group>"; };
+		DF0CA12217918A3E00E4F721 /* FirstTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableCell.h; sourceTree = "<group>"; };
+		DF0CA12317918A3E00E4F721 /* FirstTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableCell.m; sourceTree = "<group>"; };
 		DF6B41A4178DC6DA00181DEA /* FirstiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6B41A7178DC6DA00181DEA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DF6B41A9178DC6DA00181DEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -125,6 +130,9 @@
 				DF6B41C2178DC6DA00181DEA /* MainStoryboard_iPad.storyboard */,
 				DF6B41C5178DC6DA00181DEA /* ViewController.h */,
 				DF6B41C6178DC6DA00181DEA /* ViewController.m */,
+				DF0CA12217918A3E00E4F721 /* FirstTableCell.h */,
+				DF0CA12317918A3E00E4F721 /* FirstTableCell.m */,
+				DF0CA12017916E4500E4F721 /* FirstTableCell.xib */,
 				DF6B41AE178DC6DA00181DEA /* Supporting Files */,
 			);
 			path = FirstiOS;
@@ -240,6 +248,7 @@
 				DF6B41BE178DC6DA00181DEA /* Default-568h@2x.png in Resources */,
 				DF6B41C1178DC6DA00181DEA /* MainStoryboard_iPhone.storyboard in Resources */,
 				DF6B41C4178DC6DA00181DEA /* MainStoryboard_iPad.storyboard in Resources */,
+				DF0CA12117916E4500E4F721 /* FirstTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +286,7 @@
 				DF6B41B4178DC6DA00181DEA /* main.m in Sources */,
 				DF6B41B8178DC6DA00181DEA /* AppDelegate.m in Sources */,
 				DF6B41C7178DC6DA00181DEA /* ViewController.m in Sources */,
+				DF0CA12417918A3F00E4F721 /* FirstTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +477,7 @@
 				DF6B41E1178DC6DA00181DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF6B41E2178DC6DA00181DEA /* Build configuration list for PBXNativeTarget "FirstiOSTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +486,7 @@
 				DF6B41E4178DC6DA00181DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

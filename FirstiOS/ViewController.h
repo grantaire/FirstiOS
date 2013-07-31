@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+// Додаємо у <>
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+// {
+    // Додаємо це разом зі {}
+    // IBOutlet UITableView *table;
+    // }
+
+// Додаток 1
+@property (strong, nonatomic) NSMutableArray *loginsArray;
+@property (strong, nonatomic) NSMutableArray *idArray;
+
+//
 
 @end
