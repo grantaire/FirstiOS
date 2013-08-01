@@ -26,6 +26,7 @@
 @synthesize idArray = idArray;
 
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -65,6 +66,8 @@
     
     NSLog(@"%@", loginsArray);
     NSLog(@"%@", idArray);
+    
+    
 
 }
 
@@ -97,8 +100,16 @@
     cell.loginLabel.text = [loginsArray objectAtIndex:indexPath.row];
     cell.idLabel.text = [idArray objectAtIndex:indexPath.row];
     
+    /*
+    for(id lastObject in )
+    {
+        [tableView reloadData];
+    }
+    */
+    
     return cell;
 }
+
 
 
 
