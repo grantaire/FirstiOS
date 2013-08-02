@@ -128,14 +128,17 @@
  
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row > loginsArray.count)
+    if (indexPath.row == loginsArray.count - 1)
     {
-        int plus1 = 1; // loginsArray.count/30;
+        int plus1 = loginsArray.count/30;
+        
+        NSLog(@"row - %d, count - %d", indexPath.row, loginsArray.count);
         
         [self methodFor: plus1];
         
         [tableView reloadData];
     }
+     NSLog(@"row - %d, count - %d", indexPath.row, loginsArray.count);
 }
 
 
