@@ -11,9 +11,8 @@
 // Додаємо у <>
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 // {
-    // Додаємо це разом зі {}
-    // IBOutlet UITableView *table;
-    // }
+
+- (void) methodFor: (int) page;
 
 // Додаток 1
 @property (strong, nonatomic) NSMutableArray *loginsArray;

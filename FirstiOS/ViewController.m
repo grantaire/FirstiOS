@@ -26,15 +26,13 @@
 @synthesize idArray = idArray;
 
 
+// Метод, що корнвертує дані з JSON
 
-- (void)viewDidLoad
+- (void) methodFor: (int) page
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    
-    NSData *repData = [NSData dataWithContentsOfURL: [NSURL URLWithString: @"https://api.github.com/gists?page=0"]];
-    
+    NSString *gitPage = [NSString stringWithFormat:@"https://api.github.com/gists?page=%d", page];
+
+    NSData *repData = [NSData dataWithContentsOfURL: [NSURL URLWithString: gitPage]];
     
     //
     NSError *error = nil;
@@ -42,10 +40,6 @@
     // Converting JSON to Foundation object
     NSArray *convertedObject = [NSJSONSerialization
                                 JSONObjectWithData: repData options: 0 error: &error];
-    
-    // Це треба, щоб зчитувалсь дані, інакше масив пустий.
-    loginsArray = [NSMutableArray array];
-    idArray = [NSMutableArray array];
     
     // Цикл, щоб зчитувались усі дані
     for (NSDictionary *user in convertedObject)
@@ -66,10 +60,30 @@
     
     NSLog(@"%@", loginsArray);
     NSLog(@"%@", idArray);
+}
+
+
+// Метод, що повинен викликати methodFor для відображення даних
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	
+    // Do any additional setup after loading the view, typically from a nib.
     
     
+       // Це треба, щоб зчитувалсь дані, інакше масив пустий.
+    loginsArray = [NSMutableArray array];
+    idArray = [NSMutableArray array];
+    
+    
+    
+    [ methodFor: 0];
 
 }
+
+
+
 
 
 
@@ -109,9 +123,25 @@
     
     return cell;
 }
-
-
-
+/*
+ // Метод, що підвантажує сторінки, але він ще не дописаний, я його зміню, коли зрозумію, як викликати метод з методу
+ 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == loginsArray.count)
+    {
+        int plus1 = 0;
+        for(plus1 =0; plus1 < 7; plus1 ++)
+        {
+            NSString *gitPage = [NSString stringWithFormat:@"https://api.github.com/gists?page=%d", plus1];
+            
+            [tableView reloadData];
+        }
+        
+        
+    }
+}
+*/
 
 - (void)didReceiveMemoryWarning
 {
