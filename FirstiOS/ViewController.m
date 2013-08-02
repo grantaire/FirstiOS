@@ -78,7 +78,7 @@
     
     
     
-    [ methodFor: 0];
+    [self methodFor: 0];
 
 }
 
@@ -123,25 +123,19 @@
     
     return cell;
 }
-/*
+
  // Метод, що підвантажує сторінки, але він ще не дописаний, я його зміню, коли зрозумію, як викликати метод з методу
  
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row == loginsArray.count)
+    if (indexPath.row > loginsArray.count)
     {
-        int plus1 = 0;
-        for(plus1 =0; plus1 < 7; plus1 ++)
-        {
-            NSString *gitPage = [NSString stringWithFormat:@"https://api.github.com/gists?page=%d", plus1];
-            
-            [tableView reloadData];
-        }
+        int plus1 = loginsArray.count/30;
         
-        
+        [self methodFor: plus1];
     }
 }
-*/
+
 
 - (void)didReceiveMemoryWarning
 {
