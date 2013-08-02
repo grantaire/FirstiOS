@@ -130,9 +130,11 @@
 {
     if (indexPath.row > loginsArray.count)
     {
-        int plus1 = loginsArray.count/30;
+        int plus1 = 1; // loginsArray.count/30;
         
         [self methodFor: plus1];
+        
+        [tableView reloadData];
     }
 }
 
