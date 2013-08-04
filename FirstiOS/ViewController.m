@@ -26,6 +26,11 @@
 @synthesize idArray = idArray;
 
 
+@synthesize loginLabel = loginLabel;
+@synthesize idLabel = idLabel;
+
+
+
 // Метод, що корнвертує дані з JSON
 
 - (void) methodFor: (int) page
@@ -86,6 +91,26 @@
 
 
 
+/*
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+}
+
+*/
+
 
 
 
@@ -99,32 +124,28 @@
 {
     static NSString *firstTableIdentifier = @"FirstTableCell";
     
-    // UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:firstTableIdentifier];
-    FirstTableCell *cell = (FirstTableCell *)[tableView dequeueReusableCellWithIdentifier:firstTableIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:firstTableIdentifier];
+    // FirstTableCell *cell = (FirstTableCell *)[tableView dequeueReusableCellWithIdentifier:firstTableIdentifier];
     
     if(cell == nil)
     {
-        // cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:firstTableIdentifier];
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"FirstTableCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:firstTableIdentifier];
+        // NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"FirstTableCell" owner:self options:nil];
+        // cell = [nib objectAtIndex:0];
         
     }
     
-    // cell.textLabel.text = [loginsArray objectAtIndex:indexPath.row];
+    
     cell.loginLabel.text = [loginsArray objectAtIndex:indexPath.row];
     cell.idLabel.text = [idArray objectAtIndex:indexPath.row];
     
-    /*
-    for(id lastObject in )
-    {
-        [tableView reloadData];
-    }
-    */
+   
+
     
     return cell;
 }
 
- // Метод, що підвантажує сторінки, але він ще не дописаний, я його зміню, коли зрозумію, як викликати метод з методу
+ // Метод, що підвантажує сторінки
  
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -140,6 +161,17 @@
     }
      NSLog(@"row - %d, count - %d", indexPath.row, loginsArray.count);
 }
+
+
+
+// Selecting cell
+/*
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CodeViewController *code = [self.storyboard instantiateViewControllerWithIdentifier:@"Code"];
+}
+*/
+
 
 
 - (void)didReceiveMemoryWarning

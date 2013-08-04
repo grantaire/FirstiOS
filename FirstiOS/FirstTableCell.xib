@@ -45,7 +45,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{20, 0}, {300, 40}}</string>
 								<reference key="NSSuperview" ref="499507636"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="103962440"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -81,7 +80,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{20, 40}, {300, 40}}</string>
 								<reference key="NSSuperview" ref="499507636"/>
-								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -108,7 +106,6 @@
 						</array>
 						<string key="NSFrameSize">{320, 79}</string>
 						<reference key="NSSuperview" ref="289512671"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="253608798"/>
 						<string key="NSReuseIdentifierKey">_NS:11</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
@@ -124,12 +121,11 @@
 				</array>
 				<string key="NSFrameSize">{320, 80}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="499507636"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+				<int key="IBUIIndentationLevel">1</int>
 				<reference key="IBUIContentView" ref="499507636"/>
-				<string key="IBUIReuseIdentifier">FirstTableCell</string>
 				<real value="80" key="IBUIRowHeight"/>
 			</object>
 		</array>
@@ -300,6 +296,26 @@
 						<reference key="parent" ref="289512671"/>
 					</object>
 					<object class="IBObjectRecord">
+						<int key="objectID">97</int>
+						<reference key="object" ref="703678166"/>
+						<reference key="parent" ref="289512671"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">91</int>
+						<reference key="object" ref="393179844"/>
+						<reference key="parent" ref="289512671"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">82</int>
+						<reference key="object" ref="905438664"/>
+						<reference key="parent" ref="289512671"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">83</int>
+						<reference key="object" ref="987424099"/>
+						<reference key="parent" ref="253608798"/>
+					</object>
+					<object class="IBObjectRecord">
 						<int key="objectID">46</int>
 						<reference key="object" ref="103962440"/>
 						<array class="NSMutableArray" key="children">
@@ -323,28 +339,8 @@
 						<reference key="parent" ref="289512671"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">82</int>
-						<reference key="object" ref="905438664"/>
-						<reference key="parent" ref="289512671"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">83</int>
-						<reference key="object" ref="987424099"/>
-						<reference key="parent" ref="253608798"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">86</int>
-						<reference key="object" ref="182975794"/>
-						<reference key="parent" ref="103962440"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">87</int>
-						<reference key="object" ref="777612948"/>
-						<reference key="parent" ref="289512671"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">91</int>
-						<reference key="object" ref="393179844"/>
+						<int key="objectID">98</int>
+						<reference key="object" ref="584553757"/>
 						<reference key="parent" ref="289512671"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -353,14 +349,14 @@
 						<reference key="parent" ref="289512671"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">97</int>
-						<reference key="object" ref="703678166"/>
+						<int key="objectID">87</int>
+						<reference key="object" ref="777612948"/>
 						<reference key="parent" ref="289512671"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">98</int>
-						<reference key="object" ref="584553757"/>
-						<reference key="parent" ref="289512671"/>
+						<int key="objectID">86</int>
+						<reference key="object" ref="182975794"/>
+						<reference key="parent" ref="103962440"/>
 					</object>
 				</array>
 			</object>
@@ -401,42 +397,9 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">103</int>
+			<int key="maxID">104</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">FirstTableCell</string>
-					<string key="superclassName">UITableViewCell</string>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="idLabel">UILabel</string>
-						<string key="loginLabel">UILabel</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="idLabel">
-							<string key="name">idLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="loginLabel">
-							<string key="name">loginLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/FirstTableCell.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSLayoutConstraint</string>
-					<string key="superclassName">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/NSLayoutConstraint.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

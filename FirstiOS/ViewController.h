@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+// #import <CodeViewController.h>
 
 // Додаємо у <>
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
@@ -14,10 +15,10 @@
 
 - (void) methodFor: (int) page;
 
-// Додаток 1
 @property (strong, nonatomic) NSMutableArray *loginsArray;
 @property (strong, nonatomic) NSMutableArray *idArray;
 
-//
+@property(nonatomic, strong) IBOutlet UILabel *loginLabel;
+@property(nonatomic, strong) IBOutlet UILabel *idLabel;
 
 @end
