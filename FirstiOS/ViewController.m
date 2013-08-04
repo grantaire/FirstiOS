@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "FirstTableCell.h"
 
 
 @interface ViewController ()
@@ -26,8 +25,8 @@
 @synthesize idArray = idArray;
 
 
-@synthesize loginLabel = loginLabel;
-@synthesize idLabel = idLabel;
+// @synthesize loginLabel = loginLabel;
+// @synthesize idLabel = idLabel;
 
 
 
@@ -91,28 +90,10 @@
 
 
 
-/*
-
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-    
-    // Configure the view for the selected state
-}
-
-*/
 
 
 
+// This method is provided by UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -120,13 +101,25 @@
 }
 
 
+// This method is provided by UITableViewDataSource
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *firstTableIdentifier = @"FirstTableCell";
+    static NSString *firstTableIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:firstTableIdentifier];
-    // FirstTableCell *cell = (FirstTableCell *)[tableView dequeueReusableCellWithIdentifier:firstTableIdentifier];
     
+    UILabel *loginLabel;
+    UILabel *idLabel;
+    
+    loginLabel = (UILabel *)[cell viewWithTag:2];
+    loginLabel.text = [loginsArray objectAtIndex:indexPath.row];
+    
+    idLabel = (UILabel *)[cell viewWithTag:3];
+    idLabel.text = [idArray objectAtIndex:indexPath.row];
+    
+    
+    /*
     if(cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:firstTableIdentifier];
@@ -134,10 +127,11 @@
         // cell = [nib objectAtIndex:0];
         
     }
-    
-    
-    cell.loginLabel.text = [loginsArray objectAtIndex:indexPath.row];
-    cell.idLabel.text = [idArray objectAtIndex:indexPath.row];
+    */
+    // cell.textLabel.text = [loginsArray objectAtIndex:indexPath.row];
+
+    // cell.loginLabel.text = [loginsArray objectAtIndex:indexPath.row];
+    // cell.idLabel.text = [idArray objectAtIndex:indexPath.row];
     
    
 
